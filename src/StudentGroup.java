@@ -122,14 +122,14 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void remove(int index) 
 	{
-		if(students == null || index <0 || index > students.length)
+		if(students == null || index <0 || index >= students.length)
 		{
 			throw new IllegalArgumentException();
 		}
 		else
 		{
-			int i=0;
-			for(i=index;i<students.length;i++)
+			//int i=0;
+			for(int i=index;i<students.length;i++)
 			{
 				students[i]=students[i+1];
 			}
