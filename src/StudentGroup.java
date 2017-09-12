@@ -61,6 +61,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public void addLast(Student student) 
 	{
 		// Add your implementation here
+		this.students[students.length-1]=student;
 		
 	}
 
