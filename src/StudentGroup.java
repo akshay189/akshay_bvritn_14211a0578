@@ -284,13 +284,15 @@ public class StudentGroup implements StudentArrayOperation {
 			{
 				if(students[i]==student)
 				{
-					return students[i+1];
+					break;
+					//return students[i+1];
 					//break;
 				}
 			}
-			//return students[i+1];
+			
+			return students[i+1];
 		}
 		// Add your implementation here
-		return null;
+		//return null;
 	}
 }
