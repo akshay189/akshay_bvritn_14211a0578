@@ -160,7 +160,7 @@ public class StudentGroup implements StudentArrayOperation
 		else
 		{
 			Student[] array = new Student[students.length-1];
-			int count=0,index=0,flag=0,a=0;
+			int count=0,flag=0,a=0;
 			for(int i=0;i<students.length;i++)
 			{
 				if(students[i] != student || a==1)
@@ -293,7 +293,7 @@ public class StudentGroup implements StudentArrayOperation
 	@Override
 	public Student[] getStudentsByAge(int age) 
 	{
-		int i=0,count=0,itr=0;
+		int i=0;
 		for(i=0;i<students.length;i++)
 		{
 
