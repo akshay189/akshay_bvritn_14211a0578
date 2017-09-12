@@ -279,18 +279,21 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		else
 		{
-			int i=0;
+			int i=0,count=0;
 			for(i=0;i<students.length;i++)
 			{
 				if(students[i]==student)
 				{
+					count=1;
 					break;
 					//return students[i+1];
 					//break;
 				}
 			}
-			
-			return students[i+1];
+			if(count==1)
+				return students[i+1];
+			else
+				throw new IllegalArgumentException();
 		}
 		// Add your implementation here
 		//return null;
