@@ -43,8 +43,10 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void setStudent(Student student, int index) {
+	public void setStudent(Student student, int index) 
+	{
 		// Add your implementation here
+		this.students[index] = student;
 	}
 
 	@Override
