@@ -37,7 +37,8 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student getStudent(int index) {
+	public Student getStudent(int index)throws IllegalArgumentException
+	{
 		// Add your implementation here
 		return students[index];
 	}
@@ -50,13 +51,17 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void addFirst(Student student) {
+	public void addFirst(Student student) 
+	{
 		// Add your implementation here
+		this.students[0] = student;
 	}
 
 	@Override
-	public void addLast(Student student) {
+	public void addLast(Student student) 
+	{
 		// Add your implementation here
+		
 	}
 
 	@Override
