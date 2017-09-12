@@ -201,6 +201,10 @@ public class StudentGroup implements StudentArrayOperation {
 		{
 			throw new IllegalArgumentException();
 		}
+		else
+		{
+			
+		}
 		// Add your implementation here
 		
 	}
@@ -273,7 +277,19 @@ public class StudentGroup implements StudentArrayOperation {
 		{
 			throw new IllegalArgumentException();
 		}
+		else
+		{
+			int i=0;
+			for(i=0;i<students.length;i++)
+			{
+				if(students[i]==student)
+				{
+					break;
+				}
+			}
+			return students[i+1];
+		}
 		// Add your implementation here
-		return null;
+		//return null;
 	}
 }
