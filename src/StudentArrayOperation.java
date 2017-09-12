@@ -108,7 +108,7 @@ public interface StudentArrayOperation {
 
 	/**
 	 * Removes the first occurrence of the specified element from this array, if
-	 * it is present. If this array does not contain the element, it is
+	 * itot con is present. If this array does ntain the element, it is
 	 * unchanged and should throw IllegalArgumentException with "Student not
 	 * exist" message if student == null method should throw
 	 * IllegalArgumentException
