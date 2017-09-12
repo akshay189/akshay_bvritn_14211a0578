@@ -129,6 +129,10 @@ public class StudentGroup implements StudentArrayOperation {
 		else
 		{
 			int i=0;
+			for(i=index;i<students.length;i++)
+			{
+				students[i]=students[i+1];
+			}
 			
 		}
 		// Add your implementation here
