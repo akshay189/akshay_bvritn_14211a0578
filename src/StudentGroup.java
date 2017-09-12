@@ -114,7 +114,14 @@ public class StudentGroup implements StudentArrayOperation {
 		else
 		{
 		// Add your implementation here
-			students[index] = student;
+			Student[] array=new Student[students.length+1];
+			for(int i=0;i<index;i++) {
+				array[i]=students[i];}
+			array[index]=student;
+			for(int i=index+1;i<students.length;i++) {
+				array[i]=students[i];}
+			students=new Student[array.length];
+			this.students=array;
 		}
 		// Add your implementation here
 	}
@@ -122,17 +129,21 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void remove(int index) 
 	{
-		if(index <0 || index >= students.length)
+		if( students == null || index <0 || index >= students.length)
 		{
 			throw new IllegalArgumentException();
 		}
 		else
 		{
 			//int i=0;
-			for(int i=index;i<students.length;i++)
-			{
-				students[i]=students[i+1];
-			}
+			Student[] array=new Student[students.length+1];
+			int count=0;
+			for(int i=0;i<index;i++) {
+				array[count++]=students[i];}
+			for(int i=index+1;i<students.length;i++) {
+				array[count++]=students[i];}
+			students = new Student[array.length];
+			this.students = array;
 		}
 		// Add your implementation here
 	}
