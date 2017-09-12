@@ -26,47 +26,90 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		
-		return students;
+		if(students == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else {
+		return students;}
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
+		
 		this.students = students;
 	}
 
 	@Override
-	public Student getStudent(int index)throws IllegalArgumentException
+	public Student getStudent(int index)
 	{
+		if(students == null || index <0 || index > students.length)
+		{
+			throw new IllegalArgumentException();
+		}
 		// Add your implementation here
-		return students[index];
+		else {
+		return students[index];}
 	}
 
 	@Override
 	public void setStudent(Student student, int index) 
 	{
+		if(students == null || index <0 || index > students.length)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
 		// Add your implementation here
 		this.students[index] = student;
+		}
 	}
 
 	@Override
 	public void addFirst(Student student) 
 	{
 		// Add your implementation here
-		this.students[0] = student;
+		if(students == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+		// Add your implementation here
+			students[0] = student;
+		}
+		
 	}
 
 	@Override
 	public void addLast(Student student) 
 	{
+		if(students == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
 		// Add your implementation here
-		this.students[students.length-1]=student;
+			students[students.length-1] = student;
+		}
 		
 	}
 
 	@Override
-	public void add(Student student, int index) {
+	public void add(Student student, int index) 
+	{
+		if(students == null || index <0 || index > students.length)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+		// Add your implementation here
+			students[index] = student;
+		}
 		// Add your implementation here
 	}
 
