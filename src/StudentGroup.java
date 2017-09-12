@@ -136,7 +136,7 @@ public class StudentGroup implements StudentArrayOperation {
 		else
 		{
 			//int i=0;
-			Student[] array=new Student[students.length+1];
+			Student[] array = new Student[students.length-1];
 			int count=0;
 			for(int i=0;i<index;i++) {
 				array[count++]=students[i];}
