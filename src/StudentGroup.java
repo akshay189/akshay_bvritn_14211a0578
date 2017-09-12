@@ -363,5 +363,6 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		// Add your implementation here
 		//return null;
+		}
 	}
 }
