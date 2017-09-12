@@ -133,7 +133,6 @@ public class StudentGroup implements StudentArrayOperation {
 			{
 				students[i]=students[i+1];
 			}
-			
 		}
 		// Add your implementation here
 	}
