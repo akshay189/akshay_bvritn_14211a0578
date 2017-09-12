@@ -11,7 +11,8 @@ import java.util.Date;
  * DO NOT PUT any classes into packages
  *
  */
-public class StudentGroup implements StudentArrayOperation {
+public class StudentGroup implements StudentArrayOperation 
+{
 
 	private Student[] students;
 	
@@ -361,6 +362,7 @@ public class StudentGroup implements StudentArrayOperation {
 			{
 				throw new IllegalArgumentException();
 		}
+			return students[ind+1];
 		// Add your implementation here
 		//return null;
 		}
