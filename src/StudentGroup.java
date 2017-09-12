@@ -181,7 +181,7 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		else
 		{
-			Student[] array = new Student[students.length+1 - (students.length-index)];
+			Student[] array = new Student[students.length + 1 - (students.length-index)];
 			int count=0;
 			for(int i=0;i<=index;i++)
 			{
@@ -195,17 +195,33 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void removeFromElement(Student student) {
+	public void removeFromElement(Student student) 
+	{
+		if( students == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		// Add your implementation here
+		
+	}
+
+	@Override
+	public void removeToIndex(int index) 
+	{
+		if( students == null || index <0 || index >= students.length)
+		{
+			throw new IllegalArgumentException();
+		}
 		// Add your implementation here
 	}
 
 	@Override
-	public void removeToIndex(int index) {
-		// Add your implementation here
-	}
-
-	@Override
-	public void removeToElement(Student student) {
+	public void removeToElement(Student student) 
+	{
+		if( students == null)
+		{
+			throw new IllegalArgumentException();
+		}
 		// Add your implementation here
 	}
 
@@ -251,7 +267,12 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student getNextStudent(Student student) {
+	public Student getNextStudent(Student student) 
+	{
+		if( students == null)
+		{
+			throw new IllegalArgumentException();
+		}
 		// Add your implementation here
 		return null;
 	}
