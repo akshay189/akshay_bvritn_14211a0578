@@ -140,10 +140,10 @@ public class StudentGroup implements StudentArrayOperation {
 			int count=0;
 			for(int i=0;i<index;i++) {
 				array[count++]=students[i];}
-			for(int i=index+1;i<students.length;i++) {
+			for(int i = index+1;i<students.length;i++) {
 				array[count++]=students[i];}
 			students = new Student[array.length];
-			this.students = array;
+			students = array;
 		}
 		// Add your implementation here
 	}
@@ -159,16 +159,27 @@ public class StudentGroup implements StudentArrayOperation {
 		else
 		{
 			Student[] array = new Student[students.length-1];
-			int count=0,index=0;
+			int count=0,index=0,flag=0;
 			for(int i=0;i<students.length;i++)
 			{
 				if(students[i] != student)
 				{
 					array[count++] = students[i];
 				}
+				else
+				{
+					flag=1;
+				}
 			}
-			students = new Student[array.length];
-			this.students = array;
+			if(flag==0)
+			{
+				throw new IllegalArgumentException();
+			}
+			else
+			{
+				students = new Student[array.length];
+				this.students = array;
+			}
 		}
 	}
 
@@ -235,39 +246,91 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student[] getByBirthDate(Date date) {
+	public Student[] getByBirthDate(Date date) 
+	{
+		if(date == null)
+		{
+			throw new IllegalArgumentException();
+		}
 		// Add your implementation here
 		return null;
 	}
 
 	@Override
-	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
+	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) 
+	{
+		if(firstDate == null || lastDate == null)
+		{
+			throw new IllegalArgumentException();
+		}
 		// Add your implementation here
 		return null;
 	}
 
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
+		if(date == null)
+		{
+			throw new IllegalArgumentException();
+		}
 		// Add your implementation here
 		return null;
 	}
 
 	@Override
-	public int getCurrentAgeByDate(int indexOfStudent) {
+	public int getCurrentAgeByDate(int indexOfStudent) 
+	{
+		if(indexOfStudent == 0)
+		{
+			throw new IllegalArgumentException();
+		}
 		// Add your implementation here
 		return 0;
 	}
 
 	@Override
-	public Student[] getStudentsByAge(int age) {
+	public Student[] getStudentsByAge(int age) 
+	{
+		int i=0,count=0,itr=0;
+		for(i=0;i<students.length;i++)
+		{
+
+		}
 		// Add your implementation here
 		return null;
 	}
 
 	@Override
-	public Student[] getStudentsWithMaxAvgMark() {
+	public Student[] getStudentsWithMaxAvgMark() 
+	{
 		// Add your implementation here
-		return null;
+		int i=0,count=0,itr=0;
+		double max=0;
+		for(i=0;i<students.length;i++)
+		{
+			if(max < students[i].getAvgMark())
+			{
+				max = students[i].getAvgMark();
+				//count++;
+			}
+		}
+		for(i=0;i<students.length;i++)
+		{
+			if(max == students[i].getAvgMark())
+			{
+				count++;
+				//count++;
+			}
+		}
+		Student[] array = new Student[count];
+		for(i=0;i<students.length;i++)
+		{
+			if(max == students[i].getAvgMark())
+			{
+				array[itr++] = students[i];
+			}
+		}
+		return array;
 	}
 
 	@Override
