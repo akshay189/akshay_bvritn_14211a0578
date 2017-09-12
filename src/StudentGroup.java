@@ -355,11 +355,11 @@ public class StudentGroup implements StudentArrayOperation {
 					//break;
 				}
 			}
-			if(count==0)
-				throw new IllegalArgumentException();
-			else
+			if(count==1)
 				return students[ind+1];
-			
+			else if (count==0)
+			{
+				throw new IllegalArgumentException();
 		}
 		// Add your implementation here
 		//return null;
